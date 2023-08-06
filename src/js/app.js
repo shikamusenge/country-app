@@ -12,9 +12,9 @@ modeBtn.onclick=()=>{
 }
 searchBtn.addEventListener("click",(e)=>{
     e.preventDefault();
-    const name = document.querySelector("#search-text").value;
+    const name = document.querySelector("#search-text").value.toLowerCase();
     const All = JSON.parse(localStorage.getItem("allCountries"));
-const regionCountries = All.filter(cntr=>cntr.name==name);
+const regionCountries = All.filter(cntr=>cntr.name.toLowerCase().split(' ').includes(name));
 displayResult(regionCountries);
 })
 // functions
