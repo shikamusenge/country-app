@@ -14,12 +14,13 @@ searchBtn.addEventListener("click",(e)=>{
     e.preventDefault();
     const name = document.querySelector("#search-text").value.toLowerCase();
     const All = JSON.parse(localStorage.getItem("allCountries"));
-const regionCountries = All.filter(cntr=>cntr.name.toLowerCase().split(' ').includes(name));
+const regx= new RegExp(name.replace(/[-/\\^$*+?.()|[\]{}]/g,'\\$&'),'i');
+const regionCountries = All.filter(cntr=>regx.test(cntr.name));
+
 displayResult(regionCountries);
 })
 // functions
 const switchMode =  (newMode)=>{
-    console.log("mode changing");
 const root = document.documentElement;
 const mode = localStorage.getItem("mode");
 localStorage.setItem("mode",`${newMode}`);
@@ -99,7 +100,6 @@ function setCountry(){
         const countryDetail = All.filter(cntr=>cntr.name==ctry.id);
         localStorage.setItem("country",JSON.stringify(countryDetail));
         location.href="detail.html";
-        console.log(ctry);  
         }
 
     })

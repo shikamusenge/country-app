@@ -10,7 +10,6 @@ country.borders.forEach(element => {
 country.languages.forEach(element => {
    languages += ", "+element.name; 
 });
-console.log(country);
 const dataDiv=`
 <div id="flag">
 <img src="${country.flag}" alt="${country.name}" srcset="">
@@ -38,7 +37,6 @@ modeBtn.onclick=()=>{
     switchMode(newMode);
 }
 const switchMode =  (newMode)=>{
-    console.log("mode changing");
 const root = document.documentElement;
 const mode = localStorage.getItem("mode");
 localStorage.setItem("mode",`${newMode}`);
