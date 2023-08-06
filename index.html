@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Countries App</title>
+    <link rel="stylesheet" href="src/css/style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+</head>
+<body>
+    <main>
+<div id="title-section">
+    <div id="title">Where in the wolrd ? </div>
+    <div id="mode-icon" data-mode="dark"><span class="material-symbols-outlined">
+        light_mode
+        </span></div>
+</div>
+    <form>
+            <div id="searchBox">
+                <div id="searh-icon">
+                    <button id="find-country" type="submit">
+                        <span class="material-symbols-outlined">
+                        search
+                        </span>
+                </button>
+                </div>
+                <div id="search-input">
+                    <input type="search" id="search-text" placeholder="Enter your search......">
+                </div>
+            </div>
+            <div id="region-div">
+                <select name="region" id="region">
+                    <option value="" selected disabled>select region</option>
+                </select>
+        </div>
+    </form>
+<div id="countries">
+<div class="country">
+<img src="./src/imgs/27986068-7a0040d6-63f9-11e7-8e54-dcb220e42fd7.gif" alt="" srcset="">
+</div>
+<div class="country">
+    <img src="./src/imgs/27986068-7a0040d6-63f9-11e7-8e54-dcb220e42fd7.gif" alt="" srcset="">
+    </div>
+    <div class="country">
+        <img src="./src/imgs/27986068-7a0040d6-63f9-11e7-8e54-dcb220e42fd7.gif" alt="" srcset="">
+        </div>
+    </div>
+</div>
+    </main>
+    <script src="./src/js/app.js"></script>
+</body>
+</html>

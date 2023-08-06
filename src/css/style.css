@@ -1,0 +1,131 @@
+:root{
+    --bgColor:hsl(0, 0%, 98%);
+    --eltsBgColor:hsl(0, 0%, 100%);   ;
+    --color:hsl(200, 15%, 8%);
+}
+body{
+    background-color: var(--bgColor);
+    color: var(--color);
+    margin: 0;
+    padding: 0;
+}
+main{
+    margin-inline: 4vw;
+}
+#title-section{
+    display: flex;
+    background-color: var(--eltsBgColor);
+    justify-content: space-between;
+    align-items: center;
+    padding-block: 0.5rem;
+    width: 100%;
+    border-radius: 2px;
+}
+button{
+    background-color: inherit;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    border-radius: 2px;
+}
+form{
+    margin-block: 0.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+#searchBox, #region-div{
+display: flex;
+min-width: 30%;
+background-color: var(--eltsBgColor);
+min-height: 2rem;
+border-radius: 2px;
+}
+#detail-div{
+    display: flex;
+    flex: 1;
+}
+#country-name{
+    font-size: x-large;
+    font-weight: bold;
+}
+#country-detail{
+    display: flex;
+    justify-content: space-around;
+    gap: 1rem;
+}
+#flag{
+    min-width: 30vw;
+    min-height: 10rem;
+}
+#flag img{
+    max-width: 100%;
+}
+select{
+    min-width: 30%;
+}
+#searchBox input,select{
+    font-size: medium;
+    border: none;
+    min-height: 100%;
+    outline: none;
+    background-color: var(--eltsBgColor);
+    color: inherit;
+}
+#mode-icon{
+cursor: pointer;
+padding-inline: 0.3rem;
+font-size: small;
+}
+.span{
+    color: inherit;
+}
+#countries{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    min-width: 100%;
+}
+#backbtn{
+    background-color: var(--eltsBgColor);
+    border: solid var(--color) 1px;
+    max-width: fit-content;
+    padding-inline: 1rem;
+    padding-block: 0.3rem;
+    border-radius: 0.3rem;
+}
+.coutry{
+    border-radius: 2px;
+    background: var(--eltsBgColor);
+    font-size: 16px;
+    overflow: hidden;
+    padding: 0.5rem;
+    margin: 2.9%;
+    cursor: pointer;
+}
+.falag img{
+    max-width: 100%;
+    min-width: 100%;
+    min-height: 3rem;
+    color: inherit;
+}
+.name{
+    font-weight: bold;
+    font-size: 18px;
+}
+@media screen and (max-width:650px) {
+    #country-detail{
+        flex-direction: column;
+    }
+    #countries{
+    grid-template-columns: repeat(1,1fr);
+    padding: 0;
+}
+#detail-div{
+    flex-direction: column;
+    gap: 0;
+}
+.coutry{
+   min-width: calc(100% - 7vw); 
+   margin-block-start: 0;
+}    
+}
