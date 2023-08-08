@@ -16,7 +16,7 @@ searchBtn.addEventListener("click",(e)=>{
     const All = JSON.parse(localStorage.getItem("allCountries"));
 const regx= new RegExp(name.replace(/[-/\\^$*+?.()|[\]{}]/g,'\\$&'),'i');
 const regionCountries = All.filter(cntr=>regx.test(cntr.name));
-
+console.log(regx);
 displayResult(regionCountries);
 })
 // functions
